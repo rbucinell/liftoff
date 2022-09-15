@@ -1,0 +1,18 @@
+---
+const {title = 'Lift-off with astro!'} = Astro.props;
+const props = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{ title }</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <nav></nav>
+    <article>
+        <div class="block">{JSON.stringify(props)}</div>
+      <slot /> <!-- your content is injected here -->
+    </article>
+  </body>
+</html>
